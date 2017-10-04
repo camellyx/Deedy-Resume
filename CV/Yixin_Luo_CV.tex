@@ -1,0 +1,294 @@
+% LaTeX file for resume 
+% This file uses the resume document class (res.cls)
+
+\documentclass{res}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\hypersetup{pdfstartview={FitH},colorlinks=false,pdfborder={0 0 0},}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+\newsectionwidth{0pt}  % So the text is not indented under section headings
+\usepackage{fancyhdr}  % use this package to get a 2 line header
+\renewcommand{\headrulewidth}{0pt} % suppress line drawn by default by fancyhdr
+\setlength{\headheight}{24pt} % allow room for 2-line header
+\setlength{\headsep}{24pt}  % space between header and text
+\setlength{\headheight}{24pt} % allow room for 2-line header
+\pagestyle{fancy}     % set pagestyle for document
+\rhead{ {\it Yixin Luo} } % put text in header (right side)
+%\cfoot{}                                     % the foot is empty
+\topmargin=-0.5in % start text higher on the page
+
+
+\begin{document}
+\thispagestyle{plain} % this page has no header  
+\name{Yixin Luo\\[12pt]}% the \\[12pt] adds a blank line after name
+
+\pagenumbering{arabic}
+
+\address{{\bf Contact} \\
+{\em Cell phone:} (734) 546-7629 \\
+{\em Email:} \href{mailto:yixinluo@cs.cmu.edu}{yixinluo@cs.cmu.edu} \\
+{\em Webpage:} \href{http://www.yixinluo.com}{http://www.yixinluo.com} \\
+}
+
+\address{}
+
+%\address{{\bf Office Address} \\ CIC 4\textsuperscript{th} Floor \\
+%Carnegie Mellon University \\   Pittsburgh, PA 15213 }
+
+%\address{{\bf Home Address} \\ 2 Bayard Rd, Apartment 55 \\ Pittsburgh, PA 15213 \\ (734) 546-7629 }
+
+
+\begin{resume}
+
+%==========================
+%=== Research Statement ===
+%==========================
+
+\section{\centerline{OBJECTIVE}}
+\vspace{8pt}
+I am seeking a full-time research or engineering position in the industry where
+I can use my expertise in storage systems and architectures to grow the company.
+
+
+%==========================
+%=== Research Statement ===
+%==========================
+
+% \section{\centerline{RESEARCH STATEMENT}} 
+% \vspace{8pt}
+% My research interest is in designing energy efficient, high performance and
+% reliable computer architectures and systems in general. I am interested in
+% problems related to datacenter infrastructure management, memory and storage
+% systems, reliable and dependable computing, etc.
+
+
+%=================
+%=== Education ===
+%=================
+
+%\vspace{0.2in}
+\section{\centerline{EDUCATION}} 
+\vspace{8pt} 
+{\bf Carnegie Mellon University}, Pittsburgh, PA \hspace{0.2in}
+    \hfill September 2012 to December 2017 (Expected) \\
+{\sl PhD candidate}, Computer Science Department \\
+{\sl Relevant Courses}: Database Systems, Operating Systems and Distributed Systems,
+Deep Reinforcement Learning, Machine Learning, Computer Architecture, Optimizing
+Compilers, Computer Networks \\
+\vspace{-6mm}
+
+{\bf University of Michigan}, Ann Arbor, MI \hspace{0.2in}
+    \hfill May 2012 \\
+{\sl Bachelor of Science}, Computer Engineering \\
+\vspace{-6mm}
+ 
+{\bf Shanghai Jiao Tong University}, Shanghai, China
+    \hfill August 2012 \\
+{\sl Bachelor of Science}, Electrical Engineering
+
+
+%==================
+%=== Experience ===
+%==================
+
+\vspace{0.2in} 
+\section{\centerline{EXPERIENCE}} 
+\vspace{8pt}
+{\bf Seagate Technology}, Lakeview, CA \hfill May to October 2016 \\
+{\sl Engineering intern}
+\begin{itemize} \itemsep -2pt % reduce space between items
+  \item Developed new experimental characterization software to collect and analyze NAND flash errors and threshold voltage distribution.
+  \item Applied data mining and modeling techniques to the collected raw NAND data for understanding flash error behavior.
+  \item Designed new flash management policies to improve performance and reliability.
+  \item Modified SSD controller firmware to assist raw NAND data collection.
+\end{itemize}
+{\bf Seagate Technology}, Lakeview, CA \hfill May to August 2015 \\
+{\sl Engineering intern}
+\begin{itemize} \itemsep -2pt % reduce space between items
+  \item Constructed and analyzed model of NAND flash memory errors and threshold voltage distribution.
+  \item Applied statistical modeling techniques to the collected raw NAND data for understanding flash error behavior.
+  \item Designed new flash management policies to improve performance and reliability.
+\end{itemize}
+{\bf Microsoft Research}, Redmond, WA \hfill May to August 2013 \\
+{\sl Research intern in Sensing and Energy Research Group (SERG)}
+\begin{itemize} \itemsep -2pt % reduce space between items
+  \item Characterized memory error vulnerability of data-intensive applications that runs in datacenters.
+  \item Explored cost-efficient ways of tolerating memory errors in both software and hardware.
+\end{itemize}
+\vspace{-6pt}
+
+\newpage
+%====================
+%=== Publications ===
+%====================
+
+\vspace{0.2in} 
+\section{\centerline{PUBLICATIONS}}
+\vspace{15pt}
+\begin{itemize}[leftmargin=4mm]
+
+  \item Yu Cai, Saugata Ghose, Erich F. Haratsch, \underline{Yixin Luo}, and Onur Mutlu,
+        \href{https://arxiv.org/pdf/1706.08642}{\em ``Error Characterization, Mitigation, and Recovery in Flash Memory Based Solid-State Drives''},
+        to appear in Proceedings of the IEEE, September 2017.
+  \item Yu Cai, Saugata Ghose, \underline{Yixin Luo}, Ken Mai, Onur Mutlu, and Erich F. Haratsch,
+        \href{http://www.cs.cmu.edu/~yixinluo/index_files/two-step-programming-vulnerability_hpca17.pdf}{\em ``Vulnerabilities in MLC NAND Flash Memory Programming: Experimental Analysis, Exploits, and Mitigation Techniques''},
+        Proceedings of the 23rd International Symposium on High-Performance Computer Architecture (HPCA), February 2017.
+  \item Aya Fukami, Saugata Ghose, \underline{Yixin Luo}, Yu Cai, and Onur Mutlu,
+        \href{http://www.cs.cmu.edu/~yixinluo/index_files/chip-off-forensic_dfrws17.pdf}{\em ``Improving the Reliability of Chip-Off Forensic Analysis of NAND Flash Memory Devices''},
+        Proceedings of the Digital Forensics Research Conference Europe (DFRWS EU), March 2017. {\bf (Best Paper Award)}
+  \item \underline{Yixin Luo}, Saugata Ghose, Yu Cai, Erich F. Haratsch, and Onur Mutlu,
+        \href{http://www.cs.cmu.edu/~yixinluo/index_files/online-flash-channel-modeling_jsac16.pdf}{\em ``Enabling Accurate and Practical Online Flash Channel Modeling for Modern MLC NAND Flash Memory''},
+        IEEE Journal on Selected Areas in Communications (JSAC), September 2016.
+  \item \underline{Yixin Luo}, Yu Cai, Saugata Ghose, Jongmoo Choi, and Onur Mutlu,
+        \href{http://www.cs.cmu.edu/~yixinluo/index_files/write-hotness-aware-retention-management_msst15.pdf}{\em ``WARM: Improving NAND Flash Memory Lifetime with Write-hotness Aware Retention Management''},
+        Proceedings of the 31st International Conference of Massive Storage Systems and Technologies (MSST), June 2015.
+  \item Yu Cai, \underline{Yixin Luo}, Saugata Ghose, Erich F. Haratsch, Ken Mai, and Onur Mutlu,
+        \href{http://www.cs.cmu.edu/~yixinluo/index_files/read-disturb-errors_dsn15.pdf}{\em ``Read Disturb Errors in MLC NAND Flash Memory: Characterization, Mitigation and Recovery''},
+        Proceedings of the 45th International Conference on Dependable Systems and Networks (DSN), June 2015.
+  \item Yu Cai, \underline{Yixin Luo}, Erich Haratsch, Ken Mai, Onur Mutlu,
+        \href{http://www.cs.cmu.edu/~yixinluo/index_files/flash-memory-data-retention_hpca15.pdf}{\em ``Data Retention in MLC NAND Flash Memory: Characterization, Optimization and Recovery''}, 
+        Proceedings of the 21st International Symposium on High-Performance Computer Architecture (HPCA), February 2015. {\bf (Best Paper Runner Up Award)}
+  \item \underline{Yixin Luo}, Sriram Govindan, Bikash Sharma, Mark Santaniello, Justin Meza, Aman Kansal, Jie Liu, Badriddine Khessib, Kushagra Vaid, and Onur Mutlu, 
+        \href{http://www.cs.cmu.edu/~yixinluo/index_files/heterogeneous-reliability-memory_dsn14.pdf}{\em ``Characterizing Application Memory Error Vulnerability to Optimize Data Center Cost via Heterogeneous-Reliability Memory''},
+        Proceedings of the 44th International Conference on Dependable Systems and Networks (DSN), June 2014.
+  \item Vivek Seshadri, Yoongu Kim, Chris Fallin, Donghyuk Lee, Rachata Ausavarungnirun, Gennady Pekhimenko, \underline{Yixin Luo}, Onur Mutlu, Michael A. Kozuch, Phillip B. Gibbons, and Todd C. Mowry,
+        \href{http://www.cs.cmu.edu/~yixinluo/index_files/rowclone_micro13.pdf}{\em ``RowClone: Fast and Energy-Efficient In-DRAM Bulk Data Copy and Initialization''},
+        Proceedings of the 46th International Symposium on Microarchitecture (MICRO), December 2013.
+  \item Justin Meza, \underline{Yixin Luo}, Samira Khan, Jishen Zhao, Yuan Xie, and Onur Mutlu,
+        \href{http://www.cs.cmu.edu/~yixinluo/index_files/persistent-memory-management_weed13.pdf}{\em ``A Case for Efficient Hardware-Software Cooperative Management of Storage and Memory''},
+        Proceedings of the 5th Workshop on Energy-Efficient Design (WEED), Tel-Aviv, Israel, June 2013.
+  \item Joseph L. Greathouse, Hongyi Xin, \underline{Yixin Luo}, Todd M. Austin.
+        \href{http://www.cs.cmu.edu/~yixinluo/index_files/unlimited-watchpoints_asplos12.pdf}{\em ``A Case for Unlimited Watchpoints''},
+        Proceedings of the 17th International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS), March 2012.
+  \item Arun Raghavan, \underline{Yixin Luo}, Anuj Chandawalla, Marios C. Papaefthymiou, Kevin P. Pipe, Thomas F. Wenisch, Milo M. K. Martin.
+        \href{http://www.cs.cmu.edu/~yixinluo/index_files/computational-sprinting_hpca12.pdf}{\em ``Computational Sprinting''},
+        Proceedings of the 18th International Symposium on High-Performance Computer Architecture (HPCA), February 2012. {\bf (Best Paper Award)} \\
+        {\em One of the 11 computer architecture papers of 2012 selected as Top Picks by IEEE Micro.}
+\end{itemize}
+
+%=======================
+%=== Technical Talks ===
+%=======================
+
+\vspace{0.2in} 
+\section{\centerline{TECHNICAL TALKS}}
+\vspace{15pt}
+\begin{itemize}[leftmargin=4mm]
+
+  \item \href{http://www.cs.cmu.edu/~yixinluo/index_files/online-flash-channel-modeling_fms16-talk.pptx}{\em ``Online Flash Channel Modeling and Its Applications''},
+        Flash Memory Summit (FMS), 2016.
+  \item \href{http://www.cs.cmu.edu/~yixinluo/index_files/data-retention_fms15.pptx}{\em ``Data Retention in MLC NAND Flash Memory''},
+        Flash Memory Summit (FMS), 2015.
+  \item \href{http://www.cs.cmu.edu/~yixinluo/index_files/write-hotness-aware-retention-management_msst15-talk.pptx}{\em ``WARM: Improving NAND Flash Memory Lifetime with Write-hotness Aware Retention Management''},
+        International Conference on Massive Storage Systems and Technology (MSST), 2015.
+  \item \href{http://www.cs.cmu.edu/~yixinluo/index_files/read-disturb-errors_dsn15-talk.pptx}{\em ``Read Disturb Errors in MLC NAND Flash Memory''},
+        International Conference on Dependable Systems and Networks (DSN), 2015.
+  \item \href{http://www.cs.cmu.edu/~yixinluo/index_files/flash-memory-data-retention_hpca15-talk.pptx}{\em ``Data Retention in MLC NAND Flash Memory''},
+        IEEE Symposium on High Performance Computer Architecture (HPCA), 2015. {\bf (Best Paper Session)}
+  \item \href{http://www.cs.cmu.edu/~yixinluo/index_files/heterogeneous-reliability-memory_dsn14-talk.pptx}{\em ``Optimizing Datacenter Cost via Heterogeneous Reliability Memory''},
+        International Conference on Dependable Systems and Networks (DSN), 2014.
+        
+\end{itemize}
+
+%%==============================
+%%=== Paper under submission ===
+%%==============================
+%
+%\vspace{0.2in} 
+%\section{\centerline{PAPER UNDER SUBMISSION}}
+%\vspace{15pt}
+%\begin{itemize}[leftmargin=4mm]
+%\end{itemize}
+
+%================
+%=== Projects ===
+%================
+
+\vspace{0.2in} 
+\section{\centerline{PROJECTS}} 
+\vspace{8pt}
+{\bf Research Projects} \vspace{2pt} \\
+{\bf \em Architectural Techniques for Improving NAND Flash Memory Reliability}
+\begin{itemize} \itemsep -2pt % reduce space between items
+  \item Developed new experimental characterization software to record and analyze NAND flash memory errors and threshold voltage distribution.
+  \item Applied various data mining and modeling techniques to study raw NAND data.
+  \item Designed new flash management policies to improve performance and reliability.
+\end{itemize}
+{\bf \em Heterogeneous Reliability Memory for Data Centers}
+\begin{itemize} \itemsep -2pt % reduce space between items
+  \item Developed a memory error injection and monitoring framework for data-intensive applications.
+  \item Performed a case study of application memory error tolerance on three data-intensive applications.
+  \item Explored the design space of heterogeneous-reliability memory systems.
+\end{itemize}
+{\bf \em Single-Level Storage}
+\begin{itemize} \itemsep -2pt % reduce space between items
+  \item Analyzed and simulated the performance, energy, and scalability improvement of a single-level storage system compared to a traditional two-level storage system.
+\end{itemize}
+{\bf \em Computational Sprinting}
+\begin{itemize} \itemsep -2pt % reduce space between items
+  \item Established a SPICE power model for power gating many-core processors.
+  \item Developed a circuit-level method to reduce performance overhead for power gating.
+  \item Performed SPICE circuit simulations to show the performance benefit of Computational Sprinting.
+\end{itemize}
+{\bf \em A Case for Unlimited Watchpoints}
+\begin{itemize} \itemsep -2pt % reduce space between items
+  \item Developed and simulated the performance benefits of applying the proposed hardware watchpoint support to a variety of software analyses.
+\end{itemize}
+{\bf Other Projects} \vspace{2pt} \\
+% TODO: add projects here
+{\bf \em CPU Architecture Design} {\em (Bachelor Major Design Project)}
+\begin{itemize} \itemsep -2pt % reduce space between items
+  \item Designed and implemented an out-of-order processor in SystemVerilog.
+\end{itemize}
+{\bf \em CPU Layout Design} {\em (Bachelor Major Design Project)}
+\begin{itemize} \itemsep -2pt % reduce space between items
+  \item Designed the circuit layout for an in-order processor and a 3-transistor
+    eDRAM cache.
+\end{itemize}
+\vspace{-6pt}
+
+%===========================
+%=== Teaching experience ===
+%===========================
+
+\vspace{0.2in}
+\section{\centerline{TEACHING EXPERIENCE}}
+\vspace{8pt}
+{\bf Teaching Assistant}, Carnegie Mellon University \hfill Fall 2014 \\
+{\sl Research in Parallel Computer Architecture (18-742)}
+\begin{itemize} \itemsep -2pt % reduce space between items
+  \item Responsibilities include holding office hours, shepherding student
+    projects.
+\end{itemize}
+{\bf Teaching Assistant}, Carnegie Mellon University \hfill Spring 2014 \\
+{\sl Parallel Computer Architecture and Programming (15-418/15-618)}
+\begin{itemize} \itemsep -2pt % reduce space between items
+  \item Responsibilities include holding office hours, shepherding projects,
+    preparing and grading homeworks.
+\end{itemize}
+\vspace{-6pt}
+
+%========================
+%=== Technical skills ===
+%========================
+
+\vspace{0.2in} 
+\section{\centerline{TECHNICAL SKILLS}}
+\vspace{15pt}
+\begin{itemize}[leftmargin=4mm] \itemsep -2pt % reduce space between items
+  \item {\em Lanuages:} {\tt C/C++}, {\tt Perl/Python}, {\tt Linux Shell}, \LaTeX, {\tt Verilog}, {\tt Windows Batch script}
+  \item {\em Tools:} {\tt Matlab}, {\tt Intel Pin}, {\tt HSPICE}, {\tt Cadence tools}
+  \item {\em Simulators:} {\tt gem5}, {\tt Multi2Sim}
+  \item {\em Others:} {\tt Hadoop}, {\tt MySQL}
+\end{itemize}
+
+
+%\newpage
+
+
+ 
+\end{resume} 
+\end{document}
+
+
