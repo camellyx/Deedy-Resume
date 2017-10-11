@@ -26,7 +26,7 @@
 
 \documentclass[12pt,letterpaper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
-\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
@@ -36,6 +36,9 @@
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
 \usepackage[numbers,sort&compress]{natbib}
+
+\newcommand*{\footersymbol}{%
+    {~~~{\rmfamily\textbullet}~~~}}
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
@@ -52,10 +55,16 @@
 % \fax{(000) 111 1113}
 \email{yixinluo@cmu.edu}
 \homepage{http://www.yixinluo.com}{www.yixinluo.com} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
-\extrainfo{Google Scholar: \href{https://scholar.google.com/citations?user=7IbFEaMAAAAJ}{Yixin Luo}\footersymbol%
-Github: \href{https://github.com/camellyx}{camellyx}\footersymbol%
+\extrainfo{Google Scholar: \href{https://scholar.google.com/citations?user=7IbFEaMAAAAJ}{Yixin Luo}
+% \footersymbol%
+\\
+Github: \href{https://github.com/camellyx}{camellyx}
+% \footersymbol%
+\\
 LinkedIn: \href{https://www.linkedin.com/in/luoyixin}{luoyixin}}
-\photo[70pt][0.4pt]{pictures/yixinluo} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+
+% TODO: shrink photo size to fit more on the first page
+\photo[80pt][0.4pt]{pictures/yixinluo} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 % \quote{``A witty and playful quotation'' --- John Smith}
 
 %----------------------------------------------------------------------------------------
@@ -97,12 +106,13 @@ LinkedIn: \href{https://www.linkedin.com/in/luoyixin}{luoyixin}}
 
 \section{Education}
 
-\cventry{2012--2017}{Ph.D of Computer Science}{Carnegie Mellon University}{Pittsburgh, PA}{}{Advised by Prof.\ \textbf{\href{http://users.ece.cmu.edu/~omutlu/}{Onur Mutlu}}
+\cventry{2012--2017}{Ph.D of Computer Science}{Carnegie Mellon University}{Pittsburgh, PA}{}{PhD Thesis (in progress): ``Architectural Techniques for
+Improving NAND Flash Memory Reliability'', advised by Prof.\ \textbf{\href{http://users.ece.cmu.edu/~omutlu/}{Onur Mutlu}.}
 % \newline{}
 % Selected Coursework: Deep Learning, Advanced Database Systems, Deep Reinforcement Learning, Machine Learning, Optimizing Compilers, Operating Systems and Distributed Systems, Advanced Cloud Computing, Graduate Algorithms, Computer Architecture, Computer Networks
 }  % Arguments not required can be left empty
-\cventry{2010--2012}{Bachelor of Computer Engineering}{University of Michigan}{Ann Arbor, MI}{}{GPA\@: 3.9/4.0. Dean's List 2010, 2011, EECS Scholar 2010}
-\cventry{2008--2012}{Bachelor of Electrical Engineering}{Shanghai Jiao Tong University}{Shanghai, China}{}{GPA\@: 3.8/4.0. Dean's List 2009}
+\cventry{2010--2012}{Bachelor of Computer Engineering}{University of Michigan}{Ann Arbor, MI}{}{GPA\@: 3.9/4.0. Dean's List 2010, 2011, EECS Scholar 2010.}
+\cventry{2008--2012}{Bachelor of Electrical Engineering}{Shanghai Jiao Tong University}{Shanghai, China}{}{GPA\@: 3.8/4.0. Dean's List 2009.}
 
 % \section{Masters Thesis}
 
@@ -150,17 +160,7 @@ Detailed achievements:
 \cvitem{2012}{HPCA Best Paper Award}
 
 %----------------------------------------------------------------------------------------
-%	COMPUTER SKILLS SECTION
-%----------------------------------------------------------------------------------------
-
-\section{Computer skills}
-
-\cvitem{Advanced}{C++, Python, Matlab, Shell, Verilog, \LaTeX}
-\cvitem{Intermediate}{Perl, HTML, Windows Batch, TensorFlow, PyTorch}
-\cvitem{Tools}{Intel Pin, HSPICE, Cadence tools, gem5, Multi2Sim, MySQL/PostgreSQL}
-
-%----------------------------------------------------------------------------------------
-%	CONFERENCE TALKS SECTION
+%   CONFERENCE TALKS SECTION
 %----------------------------------------------------------------------------------------
 
 \section{Conference Talks}
@@ -173,6 +173,15 @@ Detailed achievements:
 \cvitemwithcomment{2014}{Optimizing Data Center Cost via Heterogeneous Reliability Memory}{DSN}
 
 %----------------------------------------------------------------------------------------
+%   PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\setlength{\bibsep}{10pt plus 0.3ex}
+\bibliographystyle{unsrtnat}
+\bibliography{publications}
+\nocite{*}
+
+%----------------------------------------------------------------------------------------
 %   TEACHING SECTION
 %----------------------------------------------------------------------------------------
 
@@ -180,11 +189,11 @@ Detailed achievements:
 
 \cventry{2014}{Teaching Assistant}{Carnegie Mellon University}{Pittsburgh, PA}{}{
 CMU 18--742 --- \textbf{Parallel Computer Architecture}, taught by Prof.\ \textbf{\href{http://users.ece.cmu.edu/~omutlu/}{Onur Mutlu}}. \newline{}
-Responsibilities include holding office hours, shepherding student projects.}
+Responsibilities include holding office hours, mentoring research projects.}
 
 \cventry{2014}{Teaching Assistant}{Carnegie Mellon University}{Pittsburgh, PA}{}{
 CMU 15--418/15--618 --- \textbf{Parallel Computer Architecture and Programming}, taught by Prof.\ \textbf{\href{https://www.cs.cmu.edu/~kayvonf/}{Kayvon Fatahalian}}. \newline{}
-Responsibilities include holding office hours, shepherding projects, preparing and grading homeworks.}
+Responsibilities include holding office hours, mentoring projects, preparing and grading homeworks.}
 
 %----------------------------------------------------------------------------------------
 %   PROJECTS SECTION
@@ -197,10 +206,19 @@ Responsibilities include holding office hours, shepherding projects, preparing a
 % \cventry{2013}{Single-Level Storage}{}{}{}{
 % Detailed achievements:
 % \begin{itemize}
-%   \item Performed architectural simulation to show the performance, energy, and scalability improvement of a single-level storage system compared to a traditional two-level storage system using Multi2Sim and .
+%   \item Performed architectural simulations to show the performance, energy, and scalability improvement of a single-level storage system compared to a traditional two-level storage system using Multi2Sim and .
 % \end{itemize}}
 
-\cventry{2011--2012}{Computational Sprinting}{}{}{}{
+\cventry{2011--2012}{A Case for Unlimited Watchpoints}{Undergraduate Research Project}{}{}{
+Worked with Prof\@. \textbf{\href{http://web.eecs.umich.edu/~taustin/}{Todd M. Austin}} and Dr\@. \textbf{\href{http://www.computermachines.org/joe/}{Joseph L. Greathouse}} on architecture support for \textbf{Unlimited Watchpoints} that accelerates dynamic software analysis by 9$\times$.
+\newline{}
+Detailed achievements:
+\begin{itemize}
+  \item Developed a simulation framework for range cache using C++.
+  \item Performed architectural simulations to show the performance benefits of the proposed range cache design.
+\end{itemize}}
+
+\cventry{2011--2012}{Computational Sprinting}{Undergraduate Research Project}{}{}{
 Worked with Prof\@. \textbf{\href{http://web.eecs.umich.edu/~marios/}{Marios C. Papaefthymiou}} and Prof\@. \textbf{\href{http://web.eecs.umich.edu/~twenisch/}{Thomas F. Wenisch}} on \textbf{Computational Sprinting} of manycore processors on mobile devices that improves the responsiveness of interactive applications by 10$\times$.
 \newline{}
 Detailed achievements:
@@ -210,20 +228,11 @@ Detailed achievements:
   \item Performed SPICE circuit simulations to show the performance benefit of Computational Sprinting.
 \end{itemize}}
 
-\cventry{2011--2012}{A Case for Unlimited Watchpoints}{}{}{}{
-Worked with Prof\@. \textbf{\href{http://web.eecs.umich.edu/~taustin/}{Todd M. Austin}} and Dr\@. \textbf{\href{http://www.computermachines.org/joe/}{Joseph L. Greathouse}} on architecture support for \textbf{Unlimited Watchpoints} that accelerates dynamic software analysis by 9$\times$.
-\newline{}
-Detailed achievements:
-\begin{itemize}
-  \item Developed a simulation framework for range cache using C++.
-  \item Performed architectural simulation to show the performance benefits of the proposed range cache design.
-\end{itemize}}
-
 
 \subsection{Academic Projects}
 
 \cventry{2017}{Peloton: A Self-Driving In-Memory Database}{Open Source Project}{}{}{
-Leaded a team of three graduate students on designing and implementing the database catalog for Peloton to support non-blocking DDL operations and a concurrent lock-free skiplist index. This project is advised by Prof.\ \textbf{\href{http://www.cs.cmu.edu/~pavlo/}{Andy Pavlo}}.
+Leaded a team of three graduate students to design and implement the database catalog for Peloton to support non-blocking DDL operations and to implement a concurrent lock-free skiplist index. This project is advised by Prof.\ \textbf{\href{http://www.cs.cmu.edu/~pavlo/}{Andy Pavlo}}.
 }
 
 \cventry{2011}{CPU Architecture Design}{Undergraduate Major Design Project}{}{}{
@@ -231,26 +240,6 @@ Leaded a team of three undergraduate students on designing and implementing an 1
 
 \cventry{2011}{CPU Layout Design}{Undergraduate Major Design Project}{}{}{
 Leaded a team of five graduate and undergraduate students on designing the circuit layout for a 5-stage pipelined in-order processor and a 3-transistor eDRAM cache.}
-
-%----------------------------------------------------------------------------------------
-%	INTERESTS SECTION
-%----------------------------------------------------------------------------------------
-
-\section{Interests}
-
-% \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
-
-\cvlistdoubleitem{Basketball}{Ping Pong}
-\cvlistdoubleitem{Hiking}{Traveling}
-
-%----------------------------------------------------------------------------------------
-%   PUBLICATIONS SECTION
-%----------------------------------------------------------------------------------------
-
-% \setlength{\bibsep}{0pt plus 0.3ex}
-\bibliographystyle{unsrtnat}
-\bibliography{publications}
-\nocite{*}
 
 %----------------------------------------------------------------------------------------
 %   PUBLICATIONS SECTION
@@ -273,13 +262,34 @@ Leaded a team of five graduate and undergraduate students on designing the circu
 
 \subsection{Undergraduate}
 
-\cvitem{UM EECS570}{Computer Architecture}
-\cvitem{UM EECS427}{VLSI Design}
+\cvitem{UM EECS570}{Computer Architecture + Major Design Project}
+\cvitem{UM EECS427}{VLSI Design + Major Design Project}
 \cvitem{UM EECS470}{Microprocessor-Based Systems}
 \cvitem{UM EECS482}{Operating Systems}
 \cvitem{UM EECS484}{Database Management Systems}
 \cvitem{UM EECS492}{Artificial Intelligence}
 \cvitem{SJTU}{Honors Mathematics}
+
+%----------------------------------------------------------------------------------------
+%   COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Programming Skills}
+
+\cvitem{Advanced}{C++, Python, Matlab, Shell, Verilog, \LaTeX}
+\cvitem{Intermediate}{Perl, HTML, Windows Batch, TensorFlow, PyTorch}
+\cvitem{Tools}{Intel Pin, HSPICE, Cadence tools, gem5, Multi2Sim, MySQL/PostgreSQL}
+
+%----------------------------------------------------------------------------------------
+%   INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Interests}
+
+% \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+\cvlistdoubleitem{Basketball}{Ping Pong}
+\cvlistdoubleitem{Hiking}{Traveling}
 
 %----------------------------------------------------------------------------------------
 
