@@ -35,6 +35,8 @@
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
+\usepackage[numbers,sort&compress]{natbib}
+
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
 %----------------------------------------------------------------------------------------
@@ -95,7 +97,7 @@ LinkedIn: \href{https://www.linkedin.com/in/luoyixin}{luoyixin}}
 
 \section{Education}
 
-\cventry{2012--2017}{Ph.D of Computer Science}{Carnegie Mellon University}{Pittsburgh, PA}{}{Advised by Prof.\ \href{https://users.ece.cmu.edu/~omutlu/}{Onur Mutlu}}  % Arguments not required can be left empty
+\cventry{2012--2017}{Ph.D of Computer Science}{Carnegie Mellon University}{Pittsburgh, PA}{}{Advised by Prof.\ \textbf{\href{http://users.ece.cmu.edu/~omutlu/}{Onur Mutlu}}}  % Arguments not required can be left empty
 \cventry{2010--2012}{Bachelor of Computer Engineering}{University of Michigan}{Ann Arbor, MI}{}{Dean's List 2010, 2011, EECS Scholar 2010}
 \cventry{2008--2012}{Bachelor of Electrical Engineering}{Shanghai Jiao Tong University}{Shanghai, China}{}{Dean's List 2009}
 
@@ -169,18 +171,58 @@ Detailed achievements:
 
 \section{Conference Talks}
 
-\cvitem{2010}{Oral Presentation at the California Business Conference}
-\cvitem{2009}{Poster at the Annual Business Conference in Oregon}
+\cvitemwithcomment{2016}{Online Flash Channel Modeling and Its Applications}{Flash Memory Summit}
+\cvitemwithcomment{2015}{Data Retention in MLC NAND Flash Memory}{Flash Memory Summit}
+\cvitemwithcomment{2015}{WARM\@: Write-hotnes Aware Retention Management}{MSST}
+\cvitemwithcomment{2015}{Read Disturb Errors in MLC NAND Flash Memory}{DSN}
+\cvitemwithcomment{2015}{Data Retention in MLC NAND Flash Memory}{HPCA (Best paper session)}
+\cvitemwithcomment{2014}{Optimizing Datacenter Cost via Heterogeneous Reliability Memory}{DSN}
 
 %----------------------------------------------------------------------------------------
-%	LANGUAGES SECTION
+%   PROJECTS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Languages}
+\section{Projects}
 
-\cvitemwithcomment{English}{Mothertongue}{}
-\cvitemwithcomment{Spanish}{Intermediate}{Conversationally fluent}
-\cvitemwithcomment{Dutch}{Basic}{Basic words and phrases only}
+\subsection{Research Projects}
+
+% \cventry{2013}{Single-Level Storage}{}{}{}{
+% Detailed achievements:
+% \begin{itemize}
+%   \item Performed architectural simulation to show the performance, energy, and scalability improvement of a single-level storage system compared to a traditional two-level storage system using Multi2Sim and .
+% \end{itemize}}
+
+\cventry{2011--2012}{Computational Sprinting}{}{}{}{
+Worked with Prof\@. \textbf{\href{http://web.eecs.umich.edu/~marios/}{Marios C. Papaefthymiou}} and Prof\@. \textbf{\href{http://web.eecs.umich.edu/~twenisch/}{Thomas F. Wenisch}} on \textbf{Computational Sprinting} of manycore processors on mobile devices that improves the responsiveness of interactive applications by 10$\times$.
+\newline{}
+Detailed achievements:
+\begin{itemize}
+  \item Developed a SPICE power model for power gating many-core processors.
+  \item Developed a new technique to reduce the performance overhead for power gating.
+  \item Performed SPICE circuit simulations to show the performance benefit of Computational Sprinting.
+\end{itemize}}
+
+\cventry{2011--2012}{A Case for Unlimited Watchpoints}{}{}{}{
+Worked with Prof\@. \textbf{\href{http://web.eecs.umich.edu/~taustin/}{Todd M. Austin}} and Dr\@. \textbf{\href{http://www.computermachines.org/joe/}{Joseph L. Greathouse}} on architecture support for \textbf{Unlimited Watchpoints} that accelerates dynamic software analysis by 9$\times$.
+\newline{}
+Detailed achievements:
+\begin{itemize}
+  \item Developed a simulation framework for range cache using C++.
+  \item Performed architectural simulation to show the performance benefits of the proposed range cache design.
+\end{itemize}}
+
+
+\subsection{Other Projects}
+
+\cventry{2017}{Peloton: A Self-Driving In-Memory Database}{Open Source Project}{}{}{
+Leaded a team of three graduate students on designing and implementing the database catalog for Peloton to support non-blocking DDL operations and a concurrent lock-free skiplist index.
+}
+
+\cventry{2011}{CPU Architecture Design}{Undergraduate Major Design Project}{}{}{
+Leaded a team of three undergraduate students on designing and implementing an 150~MHz out-of-order processor using Verilog.}
+
+\cventry{2011}{CPU Layout Design}{Undergraduate Major Design Project}{}{}{
+Leaded a team of five graduate and undergraduate students on designing the circuit layout for a 5-stage pipelined in-order processor and a 3-transistor eDRAM cache.}
 
 %----------------------------------------------------------------------------------------
 %	INTERESTS SECTION
@@ -188,11 +230,19 @@ Detailed achievements:
 
 \section{Interests}
 
-\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+% \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
 
-\cvlistdoubleitem{Piano}{Chess}
-\cvlistdoubleitem{Cooking}{Dancing}
-\cvlistitem{Running}
+\cvlistdoubleitem{Basketball}{Ping Pong}
+\cvlistdoubleitem{Hiking}{Traveling}
+
+%----------------------------------------------------------------------------------------
+%   PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+% \setlength{\bibsep}{0pt plus 0.3ex}
+\bibliographystyle{unsrtnat}
+\bibliography{publications}
+\nocite{*}
 
 %----------------------------------------------------------------------------------------
 
