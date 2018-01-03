@@ -40,6 +40,11 @@
 \newcommand*{\footersymbol}{%
     {~~~{\rmfamily\textbullet}~~~}}
 
+
+\newif\ifcameraready%
+\camerareadytrue%
+% \camerareadyfalse%
+
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
 %----------------------------------------------------------------------------------------
@@ -106,7 +111,7 @@ LinkedIn: \href{https://www.linkedin.com/in/luoyixin}{luoyixin}}
 
 \section{Education}
 
-\cventry{2012--2017}{Ph.D of Computer Science}{Carnegie Mellon University}{Pittsburgh, PA}{}{PhD Thesis (in progress): ``Architectural Techniques for
+\cventry{2012--2018}{Ph.D of Computer Science}{Carnegie Mellon University}{Pittsburgh, PA}{}{PhD Thesis (in progress): ``Architectural Techniques for
 Improving NAND Flash Memory Reliability'', advised by Prof.\ \textbf{\href{http://users.ece.cmu.edu/~omutlu/}{Onur Mutlu}.}
 % \newline{}
 % Selected Coursework: Deep Learning, Advanced Database Systems, Deep Reinforcement Learning, Machine Learning, Optimizing Compilers, Operating Systems and Distributed Systems, Advanced Cloud Computing, Graduate Algorithms, Computer Architecture, Computer Networks
@@ -195,15 +200,17 @@ Detailed achievements:
 
 \subsection{Academic Projects}
 
-\cventry{2017}{Peloton: A Self-Driving In-Memory Database}{Open Source Project}{}{}{
-Leaded a team of three graduate students to design and implement the database catalog for Peloton to support non-blocking DDL operations and to implement a concurrent lock-free skiplist index. This project is advised by Prof.\ \textbf{\href{http://www.cs.cmu.edu/~pavlo/}{Andy Pavlo}}.
+\ifcameraready%
+\cventry{2017--2018}{Peloton: A Self-Driving In-Memory Database}{Open Source Project}{}{}{
+Led a team of three graduate students to design and develop the database catalog for Peloton to support non-blocking schema change and to implement a concurrent lock-free skiplist index. This project is advised by Prof.\ \textbf{\href{http://www.cs.cmu.edu/~pavlo/}{Andy Pavlo}}.
 }
+\fi%
 
 \cventry{2011}{CPU Architecture Design}{Undergraduate Major Design Project}{}{}{
-Leaded a team of three undergraduate students on designing and implementing an 150~MHz out-of-order processor using Verilog.}
+Led a team of three undergraduate students on designing and implementing an 150~MHz out-of-order processor using Verilog.}
 
 \cventry{2011}{CPU Layout Design}{Undergraduate Major Design Project}{}{}{
-Leaded a team of five graduate and undergraduate students on designing the circuit layout for a 5-stage pipelined in-order processor and a 3-transistor eDRAM cache.}
+Led a team of five graduate and undergraduate students on designing the circuit layout for a 5-stage pipelined in-order processor and a 3-transistor eDRAM cache.}
 
 %----------------------------------------------------------------------------------------
 %   CONFERENCE TALKS SECTION
@@ -249,16 +256,16 @@ Responsibilities include holding office hours, mentoring projects, preparing and
 
 \subsection{Graduate}
 
-\cvitem{CMU 10--707}{Deep Learning}
 \cvitem{CMU 15--721}{Advanced Database Systems}
-\cvitem{CMU 10--703}{Deep Reinforcement Learning}
-\cvitem{CMU 10--701}{Machine Learning}
-\cvitem{CMU 15--745}{Advanced Optimizing Compilers}
 \cvitem{CMU 15--712}{Advanced Operating Systems and Distributed Systems}
 \cvitem{CMU 15--719}{Advanced Cloud Computing}
-\cvitem{CMU 15--750}{Graduate Algorithms}
-\cvitem{CMU 15--740}{Computer Architecture}
 \cvitem{CMU 15--744}{Computer Networks}
+\cvitem{CMU 15--745}{Advanced Optimizing Compilers}
+\cvitem{CMU 15--740}{Computer Architecture}
+\cvitem{CMU 15--750}{Graduate Algorithms}
+\cvitem{CMU 10--701}{Machine Learning}
+\cvitem{CMU 10--707}{Deep Learning}
+\cvitem{CMU 10--703}{Deep Reinforcement Learning}
 
 \subsection{Undergraduate}
 
