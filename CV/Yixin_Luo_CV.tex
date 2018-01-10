@@ -168,7 +168,7 @@ Detailed achievements:
 %   PUBLICATIONS SECTION
 %----------------------------------------------------------------------------------------
 
-\setlength{\bibsep}{10pt plus 0.3ex}
+\setlength{\bibsep}{8pt plus 0.3ex}
 \bibliographystyle{unsrtnat}
 \bibliography{publications}
 \nocite{*}
@@ -248,11 +248,18 @@ Detailed achievements:
 
 \subsection{Academic Projects}
 
-\cventry{2017}{Deep Reinforcement Learning in Continuous Multi-Agent Environments}{Course Project}{}{}{
+\ifcameraready%
+\else%
+\cventry{2017}{Peloton: A Self-Driving In-Memory Database}{Course Project}{}{}{
+Developed a system catalog that supports non-blocking schema change and a concurrent lock-free skiplist index.
+}
+\fi%
+
+\cventry{2017}{Multi-Agent Deep Reinforcement Learning}{Course Project}{}{}{
 Developed DQN, DDPG, and MADDPG models for continuous multi-agent environment.
 }
 
-\cventry{2017}{Symbolic Information Processing}{Course Project}{}{}{
+\cventry{2017}{Symbolic Information Processing for Question Answering}{Course Project}{}{}{
 Developed an RNN model to answer questions regarding a natural language context.
 }
 
@@ -261,7 +268,7 @@ Characterized the effect of different types of noise on different components of 
 }
 
 \cventry{2014}{Compiler Support for Hardware Compression}{Course Project}{}{}{
-Developed compiler optimizations for cache compression algorithms using data splitting and memory pooling.
+Developed data splitting and memory pooling compiler optimizations for cache compression algorithms.
 }
 
 \cventry{2011}{CPU Architecture Design}{Undergraduate Major Design Project}{}{}{
